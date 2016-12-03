@@ -1,9 +1,11 @@
 <StackLayout orientation="vertical">
-    <GridLayout columns="100, *, 100" rows="auto" height="100">
-        <Button col="0" text="Previous" (tap)="onPreviousDate()"></Button>
-        <Label col="1" [text]="displayDate.toLocaleDateString('en-GB')"></Label>
-        <Button col="2" text="Next" (tap)="onNextDate()"></Button>
+    <GridLayout columns="50, *, 50" rows="auto" height="100">
+        <Button col="0" text="<" (tap)="onPreviousDate()"></Button>
+        <Label col="1" style="text-align: center; font-size: 30px" [text]="displayDate.toLocaleDateString('en-GB')"></Label>
+        <Button col="2" text=">" (tap)="onNextDate()"></Button>
     </GridLayout>
     <Label text="Chanukia" class="h1 text-center"></Label>
-    <Label text="Brachot" class="h1 text-center"></Label>
+    <Label text="Bracha 1" class="h1 text-center"></Label>
+    <Label text="Bracha 2" class="h1 text-center"></Label>
+    <Label text="Bracha 3" class="h1 text-center" visibility="{{ firstDay ? 'visible' : 'collapsed' }}"></Label>
 </StackLayout>

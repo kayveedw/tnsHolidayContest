@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+// import { DatePicker } from "ui/date-picker";
 
 @Component({
     selector: "day-view",
@@ -6,24 +7,25 @@ import { Component } from "@angular/core";
 })
 export class DayViewComponent {
     public displayDate: Date;
+    public firstDay: Boolean;
 
     public constructor() {
 
         this.displayDate = new Date ();
-        this.onPreviousDate();
+        this.firstDay = true;
      }
 
      public onPreviousDate () {
 
         this.displayDate.setDate(this.displayDate.getDate() - 1);
-        console.log(this.displayDate);
+        this.firstDay = true;
 
      }
 
      public onNextDate () {
 
         this.displayDate.setDate(this.displayDate.getDate() + 1);
-        console.log(this.displayDate);
+        this.firstDay = false;
      }
 
 }

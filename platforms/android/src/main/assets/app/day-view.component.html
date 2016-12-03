@@ -1,0 +1,9 @@
+<StackLayout orientation="vertical">
+    <GridLayout columns="100, *, 100" rows="auto" height="100">
+        <Button col="0" text="Previous" (tap)="onPreviousDate()"></Button>
+        <Label col="1" [text]="displayDate.toLocaleDateString('en-GB')"></Label>
+        <Button col="2" text="Next" (tap)="onNextDate()"></Button>
+    </GridLayout>
+    <Label text="Chanukia" class="h1 text-center"></Label>
+    <Label text="Brachot" class="h1 text-center"></Label>
+</StackLayout>

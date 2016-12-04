@@ -5,9 +5,11 @@ import "rxjs/Rx";
 @Injectable()
 export class DatesService {
 
-    public constructor(private http: Http) { }
+    public constructor() {
 
-    getHebrewCalendarEvents(input: Date): void {
+    } //private http: Http) { }
+
+    private getHebrewCalendarEvents(input: Date): void {
 
         let year: number = input.getFullYear();
         let month: number = input.getMonth();
@@ -16,7 +18,7 @@ export class DatesService {
         let URL: string = "";
         URL = "http://www.hebcal.com/converter/?cfg=json&gy=" + year.toString() + "&gm=" + month.toString() + "&gd=" + day.toString() + "&g2h=1"
 
-        this.http.get(URL)
+        /*this.http.get(URL)
             .do(result => console.log("RESULT2: ", JSON.stringify(result.json())))
             .map(result => JSON.parse(result.json()))
             //.do(result => console.log("RESULT: ", JSON.stringify(result)))
@@ -24,16 +26,18 @@ export class DatesService {
             }, error => {
                 console.log("ERROR: ", error);
             });
+        */
 
     }
 
-    getChanukaDay(input: Date): number {
+    public getChanukaDay(inputDate: Date): number {
 
-        this.getHebrewCalendarEvents(input);
+        //this.getHebrewCalendarEvents(inputDate);
 
+        let startDate: Date = new Date();
+        let dayNumber: number = inputDate.getDate() - startDate.getDate() + 1;
 
-
-        return 0;
+        return dayNumber;
     }
 
 
@@ -55,5 +59,5 @@ export class DatesService {
     //     console.error(errMsg);
     //     return Observable.throw(errMsg);
     // }
-    
+
 }

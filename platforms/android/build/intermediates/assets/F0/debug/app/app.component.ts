@@ -1,5 +1,4 @@
 import { Component } from "@angular/core";
-import { DayViewComponent } from "./day-view.component"
 
 @Component({
     selector: "my-app",

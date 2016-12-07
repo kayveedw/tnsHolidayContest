@@ -1,3 +1,0 @@
-C:\Users\DWeinberg\Documents\Personal\development\ChanukaHolidayContest\platforms\android\src\main\assets\app\dates.service.js
-C:\Users\DWeinberg\Documents\Personal\development\ChanukaHolidayContest\platforms\android\src\main\assets\app\app.module.js
-C:\Users\DWeinberg\Documents\Personal\development\ChanukaHolidayContest\platforms\android\src\main\assets\app\day-view.component.js

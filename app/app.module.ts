@@ -1,8 +1,9 @@
 import { NgModule } from "@angular/core";
+import { HttpModule } from "@angular/http";
 import { NativeScriptModule } from "nativescript-angular/platform";
 
 import { AppComponent } from "./app.component";
-import { DayViewComponent } from "./day-view.component"
+import { DayViewComponent } from "./day-view.component";
 
 @NgModule({
     declarations: [
@@ -10,7 +11,7 @@ import { DayViewComponent } from "./day-view.component"
         DayViewComponent
     ],
     bootstrap: [AppComponent],
-    imports: [NativeScriptModule]
+    imports: [NativeScriptModule, HttpModule]
 })
 export class AppModule { }
 

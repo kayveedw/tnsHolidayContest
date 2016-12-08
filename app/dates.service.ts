@@ -5,9 +5,7 @@ import "rxjs/Rx";
 @Injectable()
 export class DatesService {
 
-    public constructor() {
-
-    } //private http: Http) { }
+    public constructor(private http: Http) { }
 
     private getHebrewCalendarEvents(input: Date): void {
 
@@ -18,24 +16,26 @@ export class DatesService {
         let URL: string = "";
         URL = "http://www.hebcal.com/converter/?cfg=json&gy=" + year.toString() + "&gm=" + month.toString() + "&gd=" + day.toString() + "&g2h=1"
 
-        /*this.http.get(URL)
-            .do(result => console.log("RESULT2: ", JSON.stringify(result.json())))
-            .map(result => JSON.parse(result.json()))
-            //.do(result => console.log("RESULT: ", JSON.stringify(result)))
-            .subscribe(result => {
-            }, error => {
-                console.log("ERROR: ", error);
-            });
-        */
+        // this.http.get(URL)
+        //     .do(result => console.log("RESULT2: ", JSON.stringify(result.json())));
+        //     .map(result => JSON.parse(result.json()))
+        //     // //.do(result => console.log("RESULT: ", JSON.stringify(result)))
+        //     .subscribe(result => {
+        //     }, error => {
+        //         console.log("ERROR: ", error);
+        //     });
 
     }
 
     public getChanukaDay(inputDate: Date): number {
 
-        //this.getHebrewCalendarEvents(inputDate);
+        this.getHebrewCalendarEvents(inputDate);
+        // console.log(this.getHebrewCalendarEvents(inputDate));
 
         let startDate: Date = new Date(2016, 11, 24);
-        let dayNumber: number = inputDate.getDate() - startDate.getDate() + 1;
+
+        let oneDay: number = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+        let dayNumber: number = Math.floor(inputDate.getTime() / oneDay) - Math.floor(startDate.getTime() / oneDay) + 1;
 
         if ((dayNumber < 0) || (dayNumber > 8)) {
             dayNumber = 0;

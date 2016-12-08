@@ -21,7 +21,7 @@ export class DayViewComponent implements OnInit {
         this.displayTransliteration = false;
         this.displayEnglish = true;
 
-        this.displayDate = new Date();
+        this.displayDate = new Date(2016, 11, 24);
     }
 
     ngOnInit(): void {

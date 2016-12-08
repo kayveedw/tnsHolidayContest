@@ -34,8 +34,12 @@ export class DatesService {
 
         //this.getHebrewCalendarEvents(inputDate);
 
-        let startDate: Date = new Date();
+        let startDate: Date = new Date(2016, 11, 24);
         let dayNumber: number = inputDate.getDate() - startDate.getDate() + 1;
+
+        if ((dayNumber < 0) || (dayNumber > 8)) {
+            dayNumber = 0;
+        }
 
         return dayNumber;
     }

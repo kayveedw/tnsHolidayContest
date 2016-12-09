@@ -1,6 +1,10 @@
 import { Component, OnInit } from "@angular/core";
+// Add the RxJS Observable operators.
+import './rxjs-operators';
+
 import { DatesService } from "./dates.service";
 // import { DatePicker } from "ui/date-picker";
+
 
 @Component({
     selector: "day-view",

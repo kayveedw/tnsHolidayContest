@@ -1,8 +1,11 @@
 {
   "description": "NativeScript Application",
-  "license": "SEE LICENSE IN <your-license-filename>",
+  "license": "MIT",
   "readme": "NativeScript Application",
-  "repository": "<fill-your-repository-here>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kayveedw/tnsHolidayContest.git"
+  },
   "nativescript": {
     "id": "org.nativescript.ChanukaHolidayContest",
     "tns-android": {

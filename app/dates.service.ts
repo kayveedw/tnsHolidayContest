@@ -29,7 +29,7 @@ export class DatesService {
 
     public getChanukaDay(inputDate: Date): number {
 
-        this.getHebrewCalendarEvents(inputDate);
+        //this.getHebrewCalendarEvents(inputDate);
         // console.log(this.getHebrewCalendarEvents(inputDate));
 
         let startDate: Date = new Date(2016, 11, 24);

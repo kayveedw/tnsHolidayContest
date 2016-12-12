@@ -6,39 +6,39 @@
             <!-- style="text-align: center; font-size: 30px" -->
             <Button col="2" text=">" (tap)="onNextDate()"></Button>
         </GridLayout>
-        <Label text="Day {{ dayOfChanuka }}" class="h1 text-center"></Label>
         <Image src="~/images/menorah{{ dayOfChanuka }}.png" width="200px" height="229px"></Image>
+        <Label visibility="{{ (dayOfChanuka> 0) ? 'visible' : 'collapsed' }}" text="Tonight light {{ dayOfChanuka }} candle" class="h1 text-center"></Label>
         <ScrollView>
             <StackLayout orientation="vertical">
                 <!--Brachot-->
-                <Label visibility="{{ displayHebrew ? 'visible' : 'collapsed' }}" class="h3 text-center" textWrap="true" 
-                    text="בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהַדְלִיק נֵר חֲנֻכָּה"><!-- Bracha 1 Hebrew-->
+                <Label visibility="{{ ((dayOfChanuka> 0) && ((dayOfChanuka> 0) && displayHebrew)) ? 'visible' : 'collapsed' }}" class="h3 text-center"
+                    textWrap="true" text="בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהַדְלִיק נֵר חֲנֻכָּה"><!-- Bracha 1 Hebrew-->
             </Label>
-                <Label visibility="{{ displayTransliteration ? 'visible' : 'collapsed' }}" class="h3 text-center" textWrap="true"
-                    text="Ba-ruch A-tah Ado-nai E-lo-he-nu Me-lech Ha-olam she-a-sa ni-sim la-avo-te-nu ba-ya-mim ha-hem bi-zman ha-zeh"><!-- Bracha 1 Transliteration-->
+                <Label visibility="{{ ((dayOfChanuka> 0) && ((dayOfChanuka> 0) && displayTransliteration)) ? 'visible' : 'collapsed' }}"
+                    class="h3 text-center" textWrap="true" text="Ba-ruch A-tah Ado-nai E-lo-he-nu Me-lech Ha-olam she-a-sa ni-sim la-avo-te-nu ba-ya-mim ha-hem bi-zman ha-zeh"><!-- Bracha 1 Transliteration-->
             </Label>
-                <Label visibility="{{ displayEnglish ? 'visible' : 'collapsed' }}" class="h3 text-center" textWrap="true"
+                <Label visibility="{{ ((dayOfChanuka> 0) && displayEnglish) ? 'visible' : 'collapsed' }}" class="h3 text-center" textWrap="true"
                     text="Blessed are You, Lord our G‑d, King of the universe, who has sanctified us with His commandments, and commanded us to kindle the Chanukah light"><!-- Bracha 1 English-->
             </Label>
 
-                <Label visibility="{{ displayHebrew ? 'visible' : 'collapsed' }}" class="h3 text-center" textWrap="true"
+                <Label visibility="{{ ((dayOfChanuka> 0) && displayHebrew) ? 'visible' : 'collapsed' }}" class="h3 text-center" textWrap="true"
                     text="בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם שֶׁעָשָׂה נִסִּים לַאֲבוֹתֵינוּ בַּיָּמִים הָהֵם בְּזְּמַן הַזֶּה"><!-- Bracha 2 Hebrew-->
             </Label>
-                <Label visibility="{{ displayTransliteration ? 'visible' : 'collapsed' }}" class="h3 text-center" textWrap="true" 
-                    text="Ba-ruch A-tah Ado-nai E-lo-he-nu Me-lech ha-olam a-sher ki-de-sha-nu be-mitz-vo-tav ve-tzi-va-nu le-had-lik ner Cha-nu-kah"><!-- Bracha 2 Transliteration-->
+                <Label visibility="{{ ((dayOfChanuka> 0) && displayTransliteration) ? 'visible' : 'collapsed' }}" class="h3 text-center"
+                    textWrap="true" text="Ba-ruch A-tah Ado-nai E-lo-he-nu Me-lech ha-olam a-sher ki-de-sha-nu be-mitz-vo-tav ve-tzi-va-nu le-had-lik ner Cha-nu-kah"><!-- Bracha 2 Transliteration-->
             </Label>
-                <Label visibility="{{ displayEnglish ? 'visible' : 'collapsed' }}" class="h3 text-center" textWrap="true" 
+                <Label visibility="{{ ((dayOfChanuka> 0) && displayEnglish) ? 'visible' : 'collapsed' }}" class="h3 text-center" textWrap="true"
                     text="Blessed are You, Lord our G‑d, King of the universe, who performed miracles for our forefathers in those days, at this time"><!-- Bracha 2 English-->
             </Label>
 
-                <Label visibility="{{ ( isFirstDay() && displayHebrew )  ? 'visible' : 'collapsed' }}" class="h3 text-center" textWrap="true"
-                    text="בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם שֶׁהֶחֱיָנוּ וְקִיְּמָנוּ וְהִגִּיעָנוּ לְזְּמַן הַזֶּה"><!-- Bracha 3 Hebrew-->
+                <Label visibility="{{ ( isFirstDay() && ((dayOfChanuka> 0) && displayHebrew) )  ? 'visible' : 'collapsed' }}" class="h3 text-center"
+                    textWrap="true" text="בָּרוּךְ אַתָּה אֲדֹנָי אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם שֶׁהֶחֱיָנוּ וְקִיְּמָנוּ וְהִגִּיעָנוּ לְזְּמַן הַזֶּה"><!-- Bracha 3 Hebrew-->
             </Label>
-                <Label visibility="{{ ( isFirstDay() && displayTransliteration ) ? 'visible' : 'collapsed' }}" class="h3 text-center" textWrap="true"
-                    text="Ba-ruch A-tah Ado-nai E-lo-he-nu Me-lech Ha-olam she-heche-ya-nu ve-ki-yi-ma-nu ve-higi-a-nu liz-man ha-zeh"><!-- Bracha 3 Transliteration-->
+                <Label visibility="{{ ( isFirstDay() && ((dayOfChanuka> 0) && displayTransliteration) ) ? 'visible' : 'collapsed' }}" class="h3 text-center"
+                    textWrap="true" text="Ba-ruch A-tah Ado-nai E-lo-he-nu Me-lech Ha-olam she-heche-ya-nu ve-ki-yi-ma-nu ve-higi-a-nu liz-man ha-zeh"><!-- Bracha 3 Transliteration-->
             </Label>
-                <Label visibility="{{ ( isFirstDay() && displayEnglish ) ? 'visible' : 'collapsed' }}" class="h3 text-center" textWrap="true"
-                    text="Blessed are You, Lord our G‑d, King of the universe, who has granted us life, sustained us, and enabled us to reach this occasion"><!-- Bracha 3 English-->
+                <Label visibility="{{ ( isFirstDay() && ((dayOfChanuka> 0) && displayEnglish) ) ? 'visible' : 'collapsed' }}" class="h3 text-center"
+                    textWrap="true" text="Blessed are You, Lord our G‑d, King of the universe, who has granted us life, sustained us, and enabled us to reach this occasion"><!-- Bracha 3 English-->
             </Label>
 
             </StackLayout>

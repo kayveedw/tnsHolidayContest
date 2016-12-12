@@ -1,6 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-// Add the RxJS Observable operators.
-import './rxjs-operators';
 
 import { DatesService } from "./dates.service";
 // import { DatePicker } from "ui/date-picker";
@@ -17,13 +15,13 @@ export class DayViewComponent implements OnInit {
     public displayHebrew: boolean;
     public displayTransliteration: boolean;
     public displayEnglish: boolean;
-    public dayOfChanuka: number;
+    public dayOfChanuka: number = 0;
 
     public constructor(private datesService: DatesService) {
 
         this.displayHebrew = true;
         this.displayTransliteration = false;
-        this.displayEnglish = true;
+        this.displayEnglish = false; // true;
 
         this.displayDate = new Date();
     }
@@ -34,7 +32,16 @@ export class DayViewComponent implements OnInit {
 
     private loadDayOfChanuka(inputDate: Date) {
 
-        this.dayOfChanuka = this.datesService.getChanukaDay(inputDate);
+        let dvc = this;
+        this.datesService.getChanukaDay(inputDate).then(
+            function (day) {
+                dvc.dayOfChanuka = day;
+            },
+            function (error) {
+                console.log(error);
+
+            }
+        );
     }
 
     public onPreviousDate() {

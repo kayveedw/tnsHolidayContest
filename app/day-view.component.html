@@ -1,10 +1,10 @@
 <ScrollView>
     <StackLayout orientation="vertical">
-        <GridLayout columns="50, *, 50" rows="auto" height="50">
+        <GridLayout columns="50, *, 50, 50" rows="auto" height="50">
             <Button col="0" text="<" (tap)="onPreviousDate()"></Button>
             <Label col="1" class="h2 text-center" [text]="displayDate.toLocaleDateString('en-GB')"></Label>
-            <!-- style="text-align: center; font-size: 30px" -->
-            <Button col="2" text=">" (tap)="onNextDate()"></Button>
+            <!--<Button col="2" android.systemIcon="ic_settings" text="D" (tap)="onToday()"></Button>-->
+            <Button col="3" android.systemIcon="ic_settings" text=">" (tap)="onNextDate()"></Button>
         </GridLayout>
         <Image src="~/images/menorah{{ dayOfChanuka }}.png" width="200px" height="229px"></Image>
         <Label visibility="{{ (dayOfChanuka> 0) ? 'visible' : 'collapsed' }}" text="Tonight light {{ dayOfChanuka }} candle" class="h1 text-center"></Label>

@@ -6,6 +6,8 @@ import { NativeScriptModule } from "nativescript-angular/platform";
 import { AppComponent } from "./app.component";
 import { DayViewComponent } from "./day-view.component";
 
+import geolocation = require("nativescript-geolocation");
+
 @NgModule({
     declarations: [
         AppComponent,

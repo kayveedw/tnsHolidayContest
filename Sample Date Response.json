@@ -1,13 +1,128 @@
 {
-    "gy": 2016,
-    "gm": 12,
-    "gd": 25,
-    "hy": 5777,
-    "hm": "Kislev",
-    "hd": 25,
-    "hebrew": "\u05db\u05f4\u05d4 \u05d1\u05bc\u05b0\u05db\u05b4\u05e1\u05b0\u05dc\u05b5\u05d5 \u05ea\u05e9\u05e2\u05f4\u05d6",
-    "events": [
-        "Parashat Miketz",
-        "Chanukah: 2 Candles"
-    ]
+    "date": "2016-12-13T18:07:59-00:00",
+    "link": "http://www.hebcal.com/hebcal/?v=1;maj=on;year=2016;month=12;c=on;geo=pos;latitude=51.5331827;longitude=-0.1195426;tzid=Europe%2FLondon",
+    "items": [
+        {
+            "category": "candles",
+            "hebrew": "הדלקת נרות",
+            "date": "2016-12-02T15:35:00-00:00",
+            "title": "Candle lighting: 3:35pm"
+        },
+        {
+            "category": "havdalah",
+            "hebrew": "הבדלה - 72 דקות",
+            "date": "2016-12-03T17:05:00-00:00",
+            "title": "Havdalah (72 min): 5:05pm"
+        },
+        {
+            "date": "2016-12-09T15:33:00-00:00",
+            "hebrew": "הדלקת נרות",
+            "title": "Candle lighting: 3:33pm",
+            "category": "candles"
+        },
+        {
+            "title": "Havdalah (72 min): 5:03pm",
+            "hebrew": "הבדלה - 72 דקות",
+            "date": "2016-12-10T17:03:00-00:00",
+            "category": "havdalah"
+        },
+        {
+            "date": "2016-12-16T15:33:00-00:00",
+            "hebrew": "הדלקת נרות",
+            "title": "Candle lighting: 3:33pm",
+            "category": "candles"
+        },
+        {
+            "category": "havdalah",
+            "hebrew": "הבדלה - 72 דקות",
+            "date": "2016-12-17T17:04:00-00:00",
+            "title": "Havdalah (72 min): 5:04pm"
+        },
+        {
+            "category": "candles",
+            "hebrew": "הדלקת נרות",
+            "date": "2016-12-23T15:36:00-00:00",
+            "title": "Candle lighting: 3:36pm"
+        },
+        {
+            "title": "Chanukah: 1 Candle: 5:07pm",
+            "memo": "The Jewish festival of rededication, also known as the Festival of Lights",
+            "hebrew": "חנוכה: א׳ נר",
+            "date": "2016-12-24T17:07:00-00:00",
+            "link": "http://www.hebcal.com/holidays/chanukah",
+            "category": "holiday"
+        },
+        {
+            "category": "holiday",
+            "date": "2016-12-25T17:08:00-00:00",
+            "memo": "The Jewish festival of rededication, also known as the Festival of Lights",
+            "hebrew": "חנוכה: ב׳ נרות",
+            "link": "http://www.hebcal.com/holidays/chanukah",
+            "title": "Chanukah: 2 Candles: 5:08pm"
+        },
+        {
+            "category": "holiday",
+            "memo": "The Jewish festival of rededication, also known as the Festival of Lights",
+            "date": "2016-12-26T17:08:00-00:00",
+            "hebrew": "חנוכה: ג׳ נרות",
+            "link": "http://www.hebcal.com/holidays/chanukah",
+            "title": "Chanukah: 3 Candles: 5:08pm"
+        },
+        {
+            "category": "holiday",
+            "link": "http://www.hebcal.com/holidays/chanukah",
+            "date": "2016-12-27T17:09:00-00:00",
+            "memo": "The Jewish festival of rededication, also known as the Festival of Lights",
+            "hebrew": "חנוכה: ד׳ נרות",
+            "title": "Chanukah: 4 Candles: 5:09pm"
+        },
+        {
+            "category": "holiday",
+            "title": "Chanukah: 5 Candles: 5:10pm",
+            "link": "http://www.hebcal.com/holidays/chanukah",
+            "memo": "The Jewish festival of rededication, also known as the Festival of Lights",
+            "hebrew": "חנוכה: ה׳ נרות",
+            "date": "2016-12-28T17:10:00-00:00"
+        },
+        {
+            "category": "holiday",
+            "title": "Chanukah: 6 Candles: 5:11pm",
+            "link": "http://www.hebcal.com/holidays/chanukah",
+            "date": "2016-12-29T17:11:00-00:00",
+            "memo": "The Jewish festival of rededication, also known as the Festival of Lights",
+            "hebrew": "חנוכה: ו׳ נרות"
+        },
+        {
+            "title": "Chanukah: 7 Candles: 3:42pm",
+            "memo": "The Jewish festival of rededication, also known as the Festival of Lights",
+            "date": "2016-12-30T15:42:00-00:00",
+            "hebrew": "חנוכה: ז׳ נרות",
+            "link": "http://www.hebcal.com/holidays/chanukah",
+            "category": "holiday"
+        },
+        {
+            "category": "candles",
+            "title": "Candle lighting: 3:42pm",
+            "hebrew": "הדלקת נרות",
+            "date": "2016-12-30T15:42:00-00:00"
+        },
+        {
+            "category": "holiday",
+            "hebrew": "חנוכה: ח׳ נרות",
+            "memo": "The Jewish festival of rededication, also known as the Festival of Lights",
+            "date": "2016-12-31T17:13:00-00:00",
+            "link": "http://www.hebcal.com/holidays/chanukah",
+            "title": "Chanukah: 8 Candles: 5:13pm"
+        }
+    ],
+    "title": "Hebcal December 2016 51.5331827, -0.1195426, Europe/London",
+    "location": {
+        "longitude": "-0.1195426",
+        "latitude": "51.5331827",
+        "geo": "pos",
+        "title": "51.5331827, -0.1195426, Europe/London",
+        "tzid": "Europe/London"
+    },
+    "latitude": "51.5331827",
+    "longitude": "-0.1195426"
 }

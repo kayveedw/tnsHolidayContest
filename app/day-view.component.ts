@@ -2,12 +2,16 @@ import { Component, OnInit } from "@angular/core";
 
 import { DatesService } from "./dates.service";
 // import { DatePicker } from "ui/date-picker";
+import { LocationService } from "./location.service";
 
 
 @Component({
     selector: "day-view",
     templateUrl: "day-view.component.html",
-    providers: [DatesService]
+    providers: [
+        DatesService,
+        LocationService
+    ]
 })
 export class DayViewComponent implements OnInit {
 
@@ -16,8 +20,9 @@ export class DayViewComponent implements OnInit {
     public displayTransliteration: boolean;
     public displayEnglish: boolean;
     public dayOfChanuka: number = 0;
+    public candleLightingTime: Date;
 
-    public constructor(private datesService: DatesService) {
+    public constructor(private datesService: DatesService, private locationService: LocationService) {
 
         this.displayHebrew = true;
         this.displayTransliteration = false;
@@ -28,6 +33,8 @@ export class DayViewComponent implements OnInit {
 
     ngOnInit(): void {
         this.loadDayOfChanuka(this.displayDate);
+
+
     }
 
     private loadDayOfChanuka(inputDate: Date) {
@@ -42,6 +49,21 @@ export class DayViewComponent implements OnInit {
 
             }
         );
+
+        this.locationService.getLocation().then(
+            function (location): Promise<Date> {
+                return dvc.datesService.getCandleLightingTime(inputDate, location)
+
+            }
+        ).then(
+            function (candleLightingTime) {
+                dvc.candleLightingTime = candleLightingTime;
+            },
+            function (error) {
+                console.log(error);
+            }
+            );
+
     }
 
     public onPreviousDate() {

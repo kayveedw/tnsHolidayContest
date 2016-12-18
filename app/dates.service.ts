@@ -9,7 +9,6 @@ import './rxjs-operators';
 
 import geolocation = require("nativescript-geolocation");
 
-
 @Injectable()
 export class DatesService {
 
@@ -123,7 +122,12 @@ export class DatesService {
 
 
                 if ((item.link) && (item.link == "http://www.hebcal.com/holidays/chanukah")) {
-                    console.log(item.title, " - ", item.date);
+                    // if (item.title.search(/Chanukah: [1-8] Candle.*/) >= 0) {
+                    let itemDate: Date = new Date(item.date);
+                    if (inputDate.toDateString() == itemDate.toDateString()) {
+                        console.log(item.title, " - ", itemDate.toTimeString());
+                        candleLightingTime = itemDate;
+                    }
                 }
 
                 // if (item.search(/Chanukah: [1-8] Candle/) >= 0) {
@@ -137,6 +141,5 @@ export class DatesService {
         });
 
     }
-
 
 }

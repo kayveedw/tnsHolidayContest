@@ -7,7 +7,8 @@
             <Button col="3" android.systemIcon="ic_settings" text=">" (tap)="onNextDate()"></Button>
         </GridLayout>
         <Image src="~/images/menorah{{ dayOfChanuka }}.png" width="200px" height="229px"></Image>
-        <Label visibility="{{ (dayOfChanuka> 0) ? 'visible' : 'collapsed' }}" text="Tonight light {{ dayOfChanuka }} candle" class="h1 text-center"></Label>
+        <Label visibility="{{ (dayOfChanuka> 0) ? 'visible' : 'collapsed' }}" text="Tonight light {{ dayOfChanuka }} candle(s) after {{ candleLightingTime | date:'shortTime' }}"
+            class="h1 text-center" textWrap="true"></Label>
         <ScrollView>
             <StackLayout orientation="vertical">
                 <!--Brachot-->
